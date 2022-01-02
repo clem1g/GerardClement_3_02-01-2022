@@ -1,0 +1,187 @@
+
+/* Page d'accueil */
+
+.localisation {
+    @include flex-center;
+    background-color: #eaeaea;
+    height: 50px;
+    font-family: $typo-secondaire;
+    font-weight: 600;
+    color: #353535;
+    i {
+      margin-right: 15px;
+    }
+  }
+  
+  .presentation {
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+    height: 16em;
+    background-color: #f6f6f6;
+    font-family: $typo-secondaire;
+  
+    
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    p {
+      padding: 20px;
+    }
+    button {
+      padding: 15px;
+      border: none;
+      border-radius: 40px;
+      background: linear-gradient($couleur-secondaire, $couleur-primaire);
+      color: white;
+      box-shadow: 0 10px 20px #c5c5c5;
+     
+      a{
+          width: 200px;
+          height: 100%;
+      }
+    }
+    button:hover{
+        cursor: pointer;
+    }
+  }
+  
+  
+  
+  .fontionnement {
+    @include flex-center;
+    flex-direction: column;
+    margin: 15px;
+  
+    h2 {
+      font-family: $typo-secondaire;
+      font-weight: 800;
+    }
+  
+    button {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 250px;
+      height: 70px;
+      margin: 15px;
+      font-family: $typo-secondaire;
+      border-radius: 20px;
+      border: none;
+      font-weight: 600;
+      box-shadow: 0 10px 20px #c5c5c5;
+      position: relative;
+
+
+      div {
+        position: absolute;
+        background-color: $couleur-primaire;
+        width: 20px;
+        height: 20px;
+        padding: 7px;
+        color: white;
+        border-radius: 100%;
+        left: -20px;
+      }
+    }
+  
+    i {
+      color: #7e7e7e;
+      padding: 0 15px;
+    }
+  }
+  
+  #restaurants {
+    @include flex-center;
+    flex-wrap: wrap;
+    background: #f6f6f6;
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    flex-shrink: 0;
+   
+  
+    .card-restaurants {
+      @include flex-center;
+      flex-direction: column;
+      margin: 15px;
+      width: 100%;
+      min-width: 300px;
+      max-width: 300px;
+      height: 80%;
+      min-height: 150px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px #c5c5c5;
+      position: relative;
+    }
+  
+  }
+
+  .titre-main{
+    display: flex;
+    justify-content: left;
+    width: 90%;
+h2{
+    
+    font-family: $typo-secondaire;
+    font-weight:900;
+    text-transform: capitalize;
+    font-size: 23px;
+}
+  }
+  
+  .resto-nouveau::before{
+    content: "Nouveau";
+    position: absolute;
+    @include flex-center;
+    width:80px;
+    height:25px;
+    background: $couleur-tertiaire;
+    top: 0;
+    right: 0;
+    transform: translate(-15px,15px);
+    color: darken($color: $couleur-tertiaire, $amount: 35);
+    font-family: $typo-secondaire;
+    font-weight: bold;
+    border-radius: 2px;
+    font-size: 13px;
+  
+  }
+  .img-restaurants {
+      width: 300px;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 20px  20px 0 0;
+  
+      img{
+          object-fit: cover;
+          width: 100%;
+      min-width: 290px;
+      max-width: 300px;
+          height: 130px;
+          object-position: 50% 50%;
+  
+      }
+  }
+  .body-restaurants{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    h3{
+        font-family: $typo-secondaire;
+        font-size: 17px;
+    }
+    p{
+        font-family: $typo-secondaire;
+        padding-top: 5px;
+        font-size: 15px;
+    }
+  }
+
+  /* Page d'accueil END */
