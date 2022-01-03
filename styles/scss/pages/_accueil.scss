@@ -36,6 +36,7 @@
       background: linear-gradient($couleur-secondaire, $couleur-primaire);
       color: white;
       box-shadow: 0 10px 20px #c5c5c5;
+      transition: 0.5s;
      
       a{
           width: 200px;
@@ -45,7 +46,9 @@
     button:hover{
         cursor: pointer;
     }
+
   }
+
   
   
   
@@ -72,6 +75,7 @@
       font-weight: 600;
       box-shadow: 0 10px 20px #c5c5c5;
       position: relative;
+      transition: 0.5s;
 
 
       div {
@@ -115,6 +119,7 @@
       border-radius: 20px;
       box-shadow: 0 10px 20px #c5c5c5;
       position: relative;
+      transition: 0.5s;
     }
   
   }

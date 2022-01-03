@@ -1,5 +1,250 @@
 @import url("https://fonts.googleapis.com/css2? family= Roboto:wght@100;300;400;500;700;900 & display=swap");
 @import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
+.presentation button:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: 0 10px 20px #b1b1b1;
+          box-shadow: 0 10px 20px #b1b1b1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.fontionnement button:hover {
+  background: #F5EDFF;
+  -webkit-box-shadow: 0 10px 20px #b1b1b1;
+          box-shadow: 0 10px 20px #b1b1b1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.fontionnement button:hover i {
+  color: #9356dc;
+}
+
+.btt-commander:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 0 10px 20px #b1b1b1;
+          box-shadow: 0 10px 20px #b1b1b1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.restaurant__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.restaurant__like {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.restaurant__like:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356dc));
+  background: linear-gradient(#FF79DA, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.restaurant__like:hover + .restaurant__dislike {
+  color: transparent;
+}
+
+#restaurants .card-restaurants:hover {
+  background: #F5EDFF;
+  -webkit-box-shadow: 0 10px 20px #b1b1b1;
+          box-shadow: 0 10px 20px #b1b1b1;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.card-menu:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 10px 20px #b1b1b1;
+          box-shadow: 0 10px 20px #b1b1b1;
+}
+
+.card-menu:hover .menu-text {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-right: 20px;
+}
+
+.card-menu:hover .menu-prix {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+.card-menu:hover .menu-check {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  background-color: #99E2D0;
+  text-align: right;
+  display: block;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  height: 80px;
+  min-width: 50px;
+  max-width: 100px;
+}
+
+.card-menu:hover .fa-check {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-animation: rotate 0.5s both;
+          animation: rotate 0.5s both;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  color: #99E2D0;
+}
+
+.card1 {
+  -webkit-animation: fade-in-bottom 1s 0.5s both;
+          animation: fade-in-bottom 1s 0.5s both;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.card2 {
+  -webkit-animation: fade-in-bottom 1s 0.5s both;
+          animation: fade-in-bottom 1s 0.5s both;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.card3 {
+  -webkit-animation: fade-in-bottom 1s 0.5s both;
+          animation: fade-in-bottom 1s 0.5s both;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.card4 {
+  -webkit-animation: fade-in-bottom 1s 0.5s both;
+          animation: fade-in-bottom 1s 0.5s both;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.card5 {
+  -webkit-animation: fade-in-bottom 1s 0.5s both;
+          animation: fade-in-bottom 1s 0.5s both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.card6 {
+  -webkit-animation: fade-in-bottom 1s 0.5s both;
+          animation: fade-in-bottom 1s 0.5s both;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.card7 {
+  -webkit-animation: fade-in-bottom 1s 0.5s both;
+          animation: fade-in-bottom 1s 0.5s both;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.card8 {
+  -webkit-animation: fade-in-bottom 1s 0.5s both;
+          animation: fade-in-bottom 1s 0.5s both;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.card9 {
+  -webkit-animation: fade-in-bottom 1s 0.5s both;
+          animation: fade-in-bottom 1s 0.5s both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.card10 {
+  -webkit-animation: fade-in-bottom 1s 0.5s both;
+          animation: fade-in-bottom 1s 0.5s both;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* Header */
 * {
   margin: 0;
@@ -32,7 +277,7 @@ header {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #c5c5c5;
+  background: #c5c5c5e7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,8 +287,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: loading 0s 3s both;
-          animation: loading 0s 3s both;
+  -webkit-animation: loading 0s 1s both;
+          animation: loading 0s 1s both;
 }
 
 .lettre {
@@ -224,6 +469,8 @@ header {
   color: white;
   -webkit-box-shadow: 0 10px 20px #c5c5c5;
           box-shadow: 0 10px 20px #c5c5c5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .presentation button a {
@@ -277,6 +524,8 @@ header {
   -webkit-box-shadow: 0 10px 20px #c5c5c5;
           box-shadow: 0 10px 20px #c5c5c5;
   position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .fontionnement button div {
@@ -340,6 +589,8 @@ header {
   -webkit-box-shadow: 0 10px 20px #c5c5c5;
           box-shadow: 0 10px 20px #c5c5c5;
   position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .titre-main {
@@ -431,6 +682,7 @@ header {
 }
 
 /* Page d'accueil END */
+/* Page menu */
 .header-menu {
   height: 50px;
   -webkit-box-shadow: none;
@@ -515,31 +767,84 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background: white;
-  margin: 15px 0;
+  margin: 20px 0;
   border-radius: 20px;
-  padding: 15px;
   -webkit-box-shadow: 0 10px 20px #c5c5c5;
           box-shadow: 0 10px 20px #c5c5c5;
+  min-width: 250px;
+  max-width: 500px;
+  height: 80px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.card-menu h3 {
+.card-menu .menu-text {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card-menu .menu-text h3, .card-menu .menu-text p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-left: 15px;
+}
+
+.card-menu .menu-text h3 {
   font-size: 15px;
   margin-bottom: 4px;
 }
 
-.card-menu p {
+.card-menu .menu-text p {
   font-size: 13px;
 }
 
 .menu-prix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+  -webkit-transition: 1s;
+  transition: 1s;
+  min-width: 100px;
+}
+
+.menu-check {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  opacity: 0;
+  border-radius: 0 20px 20px 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .btt {
@@ -566,8 +871,11 @@ h2 {
   font-family: "Roboto", sans-serif;
   width: 200px;
   margin: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
+/* Page menu END */
 /* Footer */
 footer {
   background: #353535;

@@ -1,6 +1,7 @@
 @import "./scss/utils/variables";
-@import "./scss/utils/_mixin.scss";
-@import "./scss/utils/_typography.scss";
+@import "./scss/utils/_mixin";
+@import "./scss/utils/_typography";
+@import "./scss/utils/animations";
 @import "./scss/layouts/_header";
 @import "./scss/pages/loading-page";
 @import "./scss/pages/accueil";

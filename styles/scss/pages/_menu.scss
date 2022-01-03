@@ -1,3 +1,5 @@
+/* Page menu */
+
 .header-menu{
     height: 50px;
     box-shadow: none;
@@ -68,26 +70,65 @@ h2{
 
 .card-menu{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: row;
     background: white;
-    margin: 15px 0;
+    margin: 20px 0;
     border-radius: 20px;
-    padding: 15px;
     box-shadow: 0 10px 20px #c5c5c5;
+    min-width: 250px;
+    max-width: 500px;
+  height: 80px;
+  transition: 0.5s;
+  .menu-text{
 
-    h3{
-        font-size: 15px;
-        margin-bottom: 4px;
-    }
-    p{
-        font-size: 13px;
+    flex-grow: 3; 
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: $typo-secondaire;
+    transition: 0.5s;
+
+        h3,p{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding-left: 15px;
+        }
+
+        h3{
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        p{
+            font-size: 13px;
+        }
     }
 }
+
 
 .menu-prix{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    font-family: $typo-secondaire;
     font-weight: 700;
+    flex-grow: 1;
+    text-align: right;
+    transition: 1s;
+    min-width: 100px;
+
+        }
+.menu-check{
+flex-grow: 0;
+
+opacity: 0;
+border-radius: 0 20px 20px 0;
+transition: 1s;
+
 }
+
 
 .btt{
     @include flex-center;
@@ -103,5 +144,7 @@ h2{
       font-family: $typo-secondaire;
       width: 200px;
       margin: 30px;
-
+      transition: 0.5s;
 }
+
+/* Page menu END */
