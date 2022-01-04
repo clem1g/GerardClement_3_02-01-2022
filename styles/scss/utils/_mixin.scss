@@ -3,3 +3,22 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin btt{
+    padding: 15px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient($couleur-secondaire, $couleur-primaire);
+    color: white;
+    box-shadow: $box-shadow;
+    font-family: $typo-secondaire;
+    transition: 0.5s;
+    width: 210px;
+    margin: 30px;
+
+}
+@mixin btt-hover{
+    box-shadow: $box-shadow-hover;
+    transform: scale(1.1);
+    cursor: pointer;
+}

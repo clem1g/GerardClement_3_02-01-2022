@@ -1,13 +1,12 @@
 .presentation button:hover{
     opacity: 0.8;
-    box-shadow: 0 10px 20px #b1b1b1;
-    transform: scale(1.1);
+    @include btt-hover;
 }
 
 .fontionnement button:hover{
     background: #F5EDFF;
-    box-shadow: 0 10px 20px #b1b1b1;
-    transform: scale(1.1);
+    @include btt-hover;
+
     i{
         color: $couleur-primaire;
     }
@@ -16,8 +15,7 @@
 
 .btt-commander:hover{
     opacity: 0.9;
-    box-shadow: 0 10px 20px #b1b1b1;
-    transform: scale(1.1);
+    @include btt-hover;
 }
 
 .restaurant__button {
@@ -26,81 +24,43 @@
     align-items: center;
     position: relative;
     
-  }
- 
+}
 
-  .restaurant__like{
+/* Animation du coeur */
+.restaurant__like{
     position: absolute;
     opacity: 0;
-    transition: 0.5s;
-  }
-  .restaurant__like:hover {
+    transition: all 0.5s;
+}
+
+.restaurant__like:hover {
     background: linear-gradient( #FF79DA, #9356dc);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     opacity: 1;
     cursor: pointer;
+}
 
-    
-   }
-   .restaurant__like:hover + .restaurant__dislike{
+.restaurant__like:hover + .restaurant__dislike{
     color: transparent;
 }
 
+/* Animation du coeur END (association pour les designers sans inspirations)*/
+
+/* Animation cards restaurants page d'accueil */
+
 #restaurants {
-.card-restaurants:hover{
-    background: #F5EDFF;
-    box-shadow: 0 10px 20px #b1b1b1;
-    transform: scale(1.05);
 
-}
-}
-
-    .card-menu:hover{
-        transform: scale(1.02);
-        box-shadow: 0 10px 20px #b1b1b1;
-
-        .menu-text{
-
-            flex-grow: 2; 
-            transition: all 0.5s;
-            margin-right: 20px;    
-        }
-        
-        .menu-prix{
-        flex-grow: 1;
-        text-align: right;
-        // margin-right: 10px ;
-
-            }
-            .menu-check{
-                flex-grow: 3;               
-                background-color: #99E2D0;
-                text-align: right;
-                display: block;
-                opacity: 1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                height: 80px;
-                min-width: 50px;
-                max-width: 100px;
-
-            }
-            .fa-check{
-                transform: rotate(180deg);
-                animation: rotate 0.5s both;
-                background-color: white;
-                padding: 10px;
-                border-radius: 50%;
-                color :$couleur-tertiaire;
-            }
-
+    .card-restaurants:hover{
+        box-shadow: $box-shadow-hover;
+        transform: scale(1.05);
     }
+}
+/* Animation cards restaurants page d'accueil END*/
     
-
+    
+/* Animation des cards menu */
     .card1{
         animation: fade-in-bottom 1s 0.5s both;
         animation-delay: 0.2s;
@@ -148,28 +108,69 @@
         animation: fade-in-bottom 1s 0.5s both;
         animation-delay: 2.2s;
     }
-    
-    @keyframes rotate {
-        0% {
-         
-                  transform: rotate(0);
-        }
-        100% {
-    
-                  transform: rotate(360deg);
-        }
-      }
 
-      @keyframes fade-in-bottom {
-        0% {
-          
-                  transform: translateY(100px);
-          opacity: 0;
+@keyframes fade-in-bottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Animation des cards menu END*/
+
+/* Animation de la div check menu*/
+
+.card-menu:hover{
+    box-shadow: $box-shadow-hover;
+    cursor: pointer;
+
+        .menu-text{
+            flex-grow: 1; 
+            transition: all 0.5s;
         }
-        100% {
-          
-                  transform: translateY(0);
-          opacity: 1;
+        
+        .menu-prix{
+            flex-grow: 1;
         }
-      }
-      
+
+        .menu-check{
+            @include flex-center;
+            flex-grow: 2;               
+            opacity: 1;
+            animation: 0.5s both fade-in-right ;
+            transform-origin: right;
+        }
+
+        .fa-check{
+            transform: rotate(180deg);
+            animation: rotate 0.5s both;
+            background-color: white;
+            padding: 10px;
+            border-radius: 50%;
+            color :$couleur-tertiaire;
+        }
+    }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fade-in-right {
+    0% {
+        flex-grow:0;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        flex-grow:3;
+        }
+}
+
+/* Animation de la div check menu*/
