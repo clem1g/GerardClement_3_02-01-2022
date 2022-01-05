@@ -10,10 +10,13 @@
 
 header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     height: 70px;
     box-shadow: 0 5px 10px #c5c5c5;
     margin-bottom: 7px;
+    img{
+      width: 150px;
+    }
 }
 /* Header END*/

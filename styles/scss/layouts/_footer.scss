@@ -26,8 +26,8 @@ footer{
         font-size: 17px;
     }
 }
-.fa-hands-helping{
-  padding: 0 2px 0 0;
+.fa-hands-helping, .fa-utensils{
+  padding: 0 10px 0 0;
 }
 
 .nav-footer{
@@ -35,16 +35,22 @@ footer{
   justify-content: center;
   flex-wrap: wrap;
   flex-grow: 1;
-  width: 100%;
+  width: 80%;
+  min-width: 280px;
   height: auto;
+  margin: auto;
   
   div{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-grow: 1;
-    min-width: 150px;
-    margin: 4px;
+    min-width: 200px;
+    margin: 10px;
+    a:hover{
+      transition: 0.3s;
+      color: $couleur-primaire;
+    }
   }
 }
 /* Footer END*/

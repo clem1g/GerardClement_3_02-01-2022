@@ -1,38 +1,37 @@
 /* Page menu */
 
 .header-menu{
-    height: 50px;
+    justify-content: space-evenly;
     box-shadow: none;
-    margin: 0;
-
+    height: 70px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
     img{
         width: 150px;
     }
 }
 
 .img-bg{
-    width: 25%;
-    min-width: 280px;
-    height: 240px;
+    min-width: 300px;
+    height: 40vh;
     width: 100%;
-    height: 250px;
     position: relative;
     overflow: hidden;
 
         img{
             flex-shrink: 0;
             position: absolute;
-            object-fit: cover;
             width: 100%;
-            height: 250px;
+            height: 100%;
+            object-fit: cover;
         }
 }
 
 main{
-    background: #F6F6F6;
-    border-radius: 40px  40px 0 0;
-    transform: translate(0,-50px);
-    padding: 20px;
+    @include flex-center;
+    background: white;
+    width: 100%;
     margin-bottom: -50px;
 
     h1{
@@ -46,20 +45,31 @@ main{
     }
 }
 
+.menu{
+    background: #F6F6F6;
+    border-radius: 50px  50px 0 0;
+    transform: translate(0,-50px);
+    margin-bottom: -50px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+
+}
+
 .section-menu{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 80%;
     max-width: 1600px;
-    margin: 15px auto ;
+    margin: 0 auto ;
     height: auto;
     }
 
 .entree, .plats, .desserts{
     min-width: 300px;
     width: 80%;
-    max-width: 400px;
+    max-width: 350px;
     height: auto;
     padding: 15px;
     flex-shrink: 0;
@@ -67,20 +77,34 @@ main{
 
 .titre-menu{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-
+    padding:15px;
     i{
         font-size: 25px;
     }
     
 }
-
-h2{
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
+.soustitre-menu{
+    
+    &::after {
+        content: '';
+        width: 55px;
+        height: 3px;
+        background: $couleur-tertiaire;
+        position: absolute;
+        z-index: 20;
+        left: 15px; 
+        top: 40px ;
+    }
+    h2{
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
 }
+
+
 
 .trait-titre{
     width: 40px;
@@ -91,7 +115,7 @@ h2{
 
 .card-menu{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     background: white;
@@ -103,9 +127,10 @@ h2{
     height: 80px;
     transition: 0.5s;
     flex-grow: 1;
+    overflow: hidden;
+    position: relative;
 
     .menu-text{
-        flex-grow: 3; 
         white-space: nowrap;
         overflow: hidden;
         font-family: $typo-secondaire;
@@ -119,15 +144,16 @@ h2{
             }
 
             h3{
-                font-size: 0.9em;
+                font-size: 15px;
                 margin-bottom: 4px;
             }
 
             p{
-                font-size: 70%;
+                font-size: 13px;
             }
     }
 }
+
 
 
 .menu-prix{
@@ -135,27 +161,23 @@ h2{
     height: 80px;
     font-family: $typo-secondaire;
     font-weight: 700;
-    flex-grow: 0.1;
     text-align: right;
-    transition: all 0.5s;
     width: 60px;
+    max-width: 70px;
     font-size: 0.9em;
 }
 
 .menu-check{
+    display: none;
+    position: absolute;
     background-color: #99E2D0;
     text-align: right;
-    flex-grow: 0;
-    opacity: 0;
     border-radius: 0 20px 20px 0;
-    display: none;
     color: white;
     height: 80px;
     min-width: 70px;
     max-width: 100px;
-    
-
-
+    right: 0;
 }
 
 
@@ -165,6 +187,7 @@ h2{
 
 .btt-commander{
 @include btt;
+
 }
 
 /* Page menu END */

@@ -6,7 +6,6 @@
     background-color: #eaeaea;
     height: 50px;
     font-family: $typo-secondaire;
-    font-weight: 600;
     color: #353535;
 
     i {
@@ -21,10 +20,12 @@
     height: 16em;
     background-color: #f6f6f6;
     font-family: $typo-secondaire;
+    padding: 15px 0;
 
     h1 {
       margin: 0;
       font-size: 24px;
+      font-weight: bold;
     }
 
     p {
@@ -40,13 +41,18 @@
   
   
 .fontionnement {
-    @include flex-center;
-    flex-direction: column;
-    margin: 15px;
-  
+    padding: 15px 0;
     h2 {
+      display: block;
+      margin-top: 15px;
+      margin-left: 15px;
       font-family: $typo-secondaire;
-      font-weight: 800;
+      font-weight: bold;
+    }
+
+    div{
+      @include flex-center;
+      flex-wrap: wrap;
     }
   
     button {
@@ -55,7 +61,7 @@
       align-items: center;
       width: 250px;
       height: 70px;
-      margin: 15px;
+      margin: 15px 25px;
       font-family: $typo-secondaire;
       border-radius: 20px;
       border: none;
