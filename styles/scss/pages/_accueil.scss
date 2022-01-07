@@ -1,131 +1,138 @@
-
 /* Page d'accueil */
 
 .localisation {
-    @include flex-center;
+  @include flex-center;
+  background-color: #eaeaea;
+  height: 50px;
+  color: black;
+
+  i {
+    margin-right: 15px;
+  }
+
+  input {
+    border: none;
     background-color: #eaeaea;
-    height: 50px;
     font-family: $typo-secondaire;
-    color: #353535;
+    font-weight: 700;
+    width: 110px;
+    padding: 0;
+    outline: none;
 
-    i {
-      margin-right: 15px;
+    &::placeholder {
+      color: black;
     }
   }
-  
-  .presentation {
-    @include flex-center;
-    flex-direction: column;
-    text-align: center;
-    height: 16em;
-    background-color: #f6f6f6;
-    font-family: $typo-secondaire;
-    padding: 15px 0;
-
-    h1 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    p {
-      padding: 20px;
-    }
-
-    button {
-      @include btt;
-    }
-  }
-
-  
-  
-  
-.fontionnement {
-    padding: 15px 0;
-    h2 {
-      display: block;
-      margin-top: 15px;
-      margin-left: 15px;
-      font-family: $typo-secondaire;
-      font-weight: bold;
-    }
-
-    div{
-      @include flex-center;
-      flex-wrap: wrap;
-    }
-  
-    button {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      width: 250px;
-      height: 70px;
-      margin: 15px 25px;
-      font-family: $typo-secondaire;
-      border-radius: 20px;
-      border: none;
-      font-weight: 600;
-      box-shadow: $box-shadow;
-      position: relative;
-      transition: 0.5s;
-
-      .fonctionnement-number {
-        position: absolute;
-        background-color: $couleur-primaire;
-        width: 20px;
-        height: 20px;
-        padding: 7px;
-        color: white;
-        border-radius: 100%;
-        left: -20px;
-      }
-    }
-  
-    i {
-      color: #7e7e7e;
-      padding: 0 15px;
-    }
 }
-  
+
+.presentation {
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+  height: 16em;
+  background-color: #f6f6f6;
+  font-family: $typo-secondaire;
+
+  h1 {
+    margin: 15px 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 20px;
+  }
+
+  button {
+    @include btt;
+  }
+}
+
+.fontionnement {
+  padding: 20px 5px;
+  h2 {
+    display: block;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-family: $typo-secondaire;
+    font-weight: bold;
+  }
+
+  div {
+    @include flex-center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+
+  button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 250px;
+    height: 70px;
+    margin: 15px 25px;
+    font-family: $typo-secondaire;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    box-shadow: $box-shadow;
+    position: relative;
+    transition: 0.5s;
+
+    .fonctionnement-number {
+      position: absolute;
+      background-color: $couleur-primaire;
+      width: 20px;
+      height: 20px;
+      padding: 7px;
+      color: white;
+      border-radius: 100%;
+      left: -20px;
+    }
+  }
+
+  i {
+    color: #7e7e7e;
+    padding: 0 15px;
+  }
+}
+
 #restaurants {
   background: #f6f6f6;
   flex-shrink: 0;
   flex-grow: 1;
   width: 100%;
+  padding: 15px 0px;
 
-    .grid-card{
-      @include flex-center;
-      flex-wrap: wrap;
-      height: auto;
-      flex-wrap: wrap;
-      width: 90%;
-      max-width: 1600px;
-      margin: 15px auto;
-      height: auto;
-    }
-  
-    .card-restaurants {
-      @include flex-center;
-      flex-direction: column;
-      margin: 15px;
-      min-width: 280px;
-      max-width: 350px;
-      min-height: 200px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: $box-shadow;
-      position: relative;
-      flex-shrink: 0;
-      flex-grow: 1;
-      transition: 0.5s;
+  .grid-card {
+    @include flex-center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 90%;
+    max-width: 1600px;
+    margin: 15px auto;
+    height: auto;
+    flex-shrink: 0;
+  }
 
-        a{
-          width: 100%;
-          height: 100%;
-        }
+  .card-restaurants {
+    @include flex-center;
+    flex-direction: column;
+    margin: 15px;
+    min-width: 280px;
+    max-width: 320px;
+    min-height: 200px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    position: relative;
+    transition: 0.5s;
+
+    a {
+      width: 100%;
+      height: 100%;
     }
-  
+  }
 }
 
 .img-restaurants {
@@ -133,70 +140,69 @@
   min-height: 130px;
   position: relative;
   overflow: hidden;
-  border-radius: 20px  20px 0 0;
-   
-    img{
-      width: 100%;
-      min-height: 100px;
-      position: absolute;
-      object-fit: cover;
-      transform: translate(0%, -25%);
-    }
+  border-radius: 20px 20px 0 0;
+
+  img {
+    width: 100%;
+    min-height: 100px;
+    position: absolute;
+    object-fit: cover;
+    transform: translate(0%, -25%);
+  }
 }
 
-.titre-main{
+.titre-main {
   display: flex;
   justify-content: left;
   width: 90%;
 
-    h2{
-        font-family: $typo-secondaire;
-        font-weight:900;
-        text-transform: capitalize;
-        font-size: 23px;
-        margin-left: 15px;
-        margin-top: 20px;
-    }
-}
-  
-.resto-nouveau::before{
-    content: "Nouveau";
-    position: absolute;
-    @include flex-center;
-    width:80px;
-    height:25px;
-    background: $couleur-tertiaire;
-    top: 0;
-    right: 0;
-    transform: translate(-15px,15px);
-    color: darken($color: $couleur-tertiaire, $amount: 35);
+  h2 {
     font-family: $typo-secondaire;
-    font-weight: bold;
-    border-radius: 2px;
-    font-size: 13px;
-    z-index: 3;
+    font-weight: 900;
+    text-transform: capitalize;
+    font-size: 23px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
 }
 
-.body-restaurants{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    height: 50px;
-    padding: 10px 15px;
-    font-size: 18px;
+.resto-nouveau::before {
+  content: "Nouveau";
+  position: absolute;
+  @include flex-center;
+  width: 80px;
+  height: 25px;
+  background: $couleur-tertiaire;
+  top: 0;
+  right: 0;
+  transform: translate(-15px, 15px);
+  color: darken($color: $couleur-tertiaire, $amount: 35);
+  font-family: $typo-secondaire;
+  font-weight: bold;
+  border-radius: 2px;
+  font-size: 13px;
+  z-index: 3;
+}
 
-      h3{
-        font-family: $typo-secondaire;
-        font-size: 17px;
-      }
+.body-restaurants {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  padding: 10px 15px;
+  font-size: 18px;
 
-      p{
-        font-family: $typo-secondaire;
-        padding-top: 5px;
-        font-size: 15px;
-      }
+  h3 {
+    font-family: $typo-secondaire;
+    font-size: 17px;
   }
 
+  p {
+    font-family: $typo-secondaire;
+    padding-top: 5px;
+    font-size: 15px;
+  }
+}
 
-  /* Page d'accueil END */
+/* Page d'accueil END */

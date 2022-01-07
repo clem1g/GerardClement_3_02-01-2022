@@ -1,13 +1,11 @@
 
 .loader {
+    @include flex-center;
     z-index: 999;
     position: fixed;
     width: 100%;
     height: 100%;
     background: #c5c5c5e7;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
     animation: loading 0s 1s both;
 }
 .lettre {

@@ -1,49 +1,47 @@
-.presentation button:hover{
-    opacity: 0.8;
-    @include btt-hover;
+.presentation button:hover {
+  opacity: 0.8;
+  @include btt-hover;
 }
 
-.fontionnement button:hover{
-    background: #F5EDFF;
-    @include btt-hover;
+.fontionnement button:hover {
+  background: #f5edff;
+  @include btt-hover;
 
-    i{
-        color: $couleur-primaire;
-    }
+  i {
+    color: $couleur-primaire;
+  }
 }
 
-
-.btt-commander:hover{
-    opacity: 0.9;
-    @include btt-hover;
+.btt-commander:hover {
+  opacity: 0.9;
+  @include btt-hover;
 }
 
 .restaurant__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 /* Animation du coeur */
-.restaurant__like{
-    position: absolute;
-    opacity: 0;
-    transition: all 0.5s;
+.restaurant__like {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 .restaurant__like:hover {
-    background: linear-gradient( #FF79DA, #9356dc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    opacity: 1;
-    cursor: pointer;
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 1;
+  cursor: pointer;
 }
 
-.restaurant__like:hover + .restaurant__dislike{
-    color: transparent;
+.restaurant__like:hover + .restaurant__dislike {
+  color: transparent;
 }
 
 /* Animation du coeur END (association pour les designers sans inspirations)*/
@@ -51,129 +49,138 @@
 /* Animation cards restaurants page d'accueil */
 
 #restaurants {
-
-    .card-restaurants:hover{
-        box-shadow: $box-shadow-hover;
-        transform: scale(1.05);
-        img{
-            transition: 0.5s;
-            filter:brightness(1.15);
-
-        }
+  .card-restaurants:hover {
+    box-shadow: $box-shadow-hover;
+    transform: scale(1.05);
+    img {
+      transition: 0.5s;
+      filter: brightness(1.15);
     }
+  }
+  .card-restaurants:active {
+    animation: scale-out-center 0.1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
 }
+
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
 /* Animation cards restaurants page d'accueil END*/
-    
-    
+
 /* Animation des cards menu */
-    .card1{
-        animation: fade-in-bottom 1s 0.5s both;
-        animation-delay: 0.2s;
-    }
-    
-    .card2{
-        animation: fade-in-bottom 1s 0.5s both;
-        animation-delay: 0.4s;
+.card1 {
+  animation: fade-in-bottom 1s 0.5s both;
+  animation-delay: 0.2s;
+}
 
-    }
-    .card3{
-        animation: fade-in-bottom 1s 0.5s both;
-        animation-delay: 0.6s;
+.card2 {
+  animation: fade-in-bottom 1s 0.5s both;
+  animation-delay: 0.4s;
+}
+.card3 {
+  animation: fade-in-bottom 1s 0.5s both;
+  animation-delay: 0.6s;
+}
+.card4 {
+  animation: fade-in-bottom 1s 0.5s both;
+  animation-delay: 0.8s;
+}
 
-    }
-    .card4{
-        animation: fade-in-bottom 1s 0.5s both;
-        animation-delay: 0.8s;
-    }
-    
-    .card5{
-        animation: fade-in-bottom 1s 0.5s both;
-        animation-delay: 1s;
+.card5 {
+  animation: fade-in-bottom 1s 0.5s both;
+  animation-delay: 1s;
+}
+.card6 {
+  animation: fade-in-bottom 1s 0.5s both;
+  animation-delay: 1.2s;
+}
 
-    }
-    .card6{
-        animation: fade-in-bottom 1s 0.5s both;
-        animation-delay: 1.2s;
-    }
-    
-    .card7{
-        animation: fade-in-bottom 1s 0.5s both;
-        animation-delay: 1.4s;
-
-    }
-    .card8{
-        animation: fade-in-bottom 1s 0.5s both;
-        animation-delay: 1.8s;
-    }
-    .card9{
-        animation: fade-in-bottom 1s 0.5s both;
-        animation-delay: 2s;
-    }
-    .card10{
-        animation: fade-in-bottom 1s 0.5s both;
-        animation-delay: 2.2s;
-    }
+.card7 {
+  animation: fade-in-bottom 1s 0.5s both;
+  animation-delay: 1.4s;
+}
+.card8 {
+  animation: fade-in-bottom 1s 0.5s both;
+  animation-delay: 1.8s;
+}
+.card9 {
+  animation: fade-in-bottom 1s 0.5s both;
+  animation-delay: 2s;
+}
+.card10 {
+  animation: fade-in-bottom 1s 0.5s both;
+  animation-delay: 2.2s;
+}
 
 @keyframes fade-in-bottom {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 /* Animation des cards menu END*/
 
 /* Animation de la div check menu*/
 
-.card-menu:hover{
-    box-shadow: $box-shadow-hover;
-    cursor: pointer;
+.card-menu:hover {
+  box-shadow: $box-shadow-hover;
+  cursor: pointer;
 
-        .menu-text{
-            transition: all 0.5s;
-            max-width: 230px;
-        }
-        
-        .menu-prix{
-            padding-right: 70px;
-            transition: 0.5s ease ;
-        }
+  .menu-text {
+    transition: all 0.5s;
+    max-width: 230px;
+  }
 
-        .menu-check{
-            @include flex-center;
-            animation: slide-left 0.5s ease ;
-            transform-origin: right;
-        }
+  .menu-prix {
+    padding-right: 70px;
+    transition: 0.5s ease;
+  }
 
-        .fa-check{
-            animation: rotate 0.5s both;
-            background-color: white;
-            padding: 10px;
-            border-radius: 50%;
-            color :$couleur-tertiaire;
-        }
-    }
+  .menu-check {
+    @include flex-center;
+    animation: slide-left 0.5s ease ;
+    transform-origin: right;
+  }
+
+  .fa-check {
+    animation: rotate 0.5s both;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    color: $couleur-tertiaire;
+  }
+}
 
 @keyframes rotate {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes slide-left {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        
-        transform: scaleX(-50px);
-    }
+  0% {
+    transform: scaleX(0);
   }
+  100% {
+    transform: scaleX(1);
+  }
+}
 
 /* Animation de la div check menu*/

@@ -183,11 +183,11 @@ main{
 
 .btt{
     @include flex-center;
+    padding-bottom: 30px;
 }
 
 .btt-commander{
 @include btt;
-
 }
 
 /* Page menu END */
