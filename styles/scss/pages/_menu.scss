@@ -136,6 +136,7 @@ main{
         font-family: $typo-secondaire;
         transition: 0.5s;
         min-width: 180px;
+        transition: all 0.5s;
 
             h3,p{
                 text-overflow: ellipsis;
@@ -165,6 +166,7 @@ main{
     width: 60px;
     max-width: 70px;
     font-size: 0.9em;
+    transition: 0.5s ease;
 }
 
 .menu-check{
